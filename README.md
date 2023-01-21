@@ -1,3 +1,3 @@
 # SwiftLibrary
 
-A description of this package.
+Часто используемые базовые классы и расширения.
