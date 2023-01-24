@@ -5,8 +5,6 @@
 //  Created by Ivan Zinovyev on 21.01.2023.
 //
 
-#if os(iOS)
-
 import UIKit
 
 open class BaseTableViewController<ViewModelType>: BaseViewController<ViewModelType> {
@@ -61,5 +59,3 @@ open class BaseTableViewController<ViewModelType>: BaseViewController<ViewModelT
     open func configureTableView() { }
     
 }
-
-#endif

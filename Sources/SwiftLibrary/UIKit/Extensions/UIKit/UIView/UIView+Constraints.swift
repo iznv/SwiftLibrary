@@ -5,8 +5,6 @@
 //  Created by Ivan Zinovyev on 21.01.2023.
 //
 
-#if os(iOS)
-
 import UIKit
 
 public extension UIView {
@@ -17,5 +15,3 @@ public extension UIView {
     }
     
 }
-
-#endif

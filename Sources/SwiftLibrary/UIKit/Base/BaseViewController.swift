@@ -5,8 +5,6 @@
 //  Created by Ivan Zinovyev on 21.01.2023.
 //
 
-#if os(iOS)
-
 import UIKit
 
 open class BaseViewController<ViewModelType>: UIViewController {
@@ -60,5 +58,3 @@ extension BaseViewController {
     }
     
 }
-
-#endif

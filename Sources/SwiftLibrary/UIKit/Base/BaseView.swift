@@ -5,8 +5,6 @@
 //  Created by Ivan Zinovyev on 24.01.2023.
 //
 
-#if os(iOS)
-
 import UIKit
 
 open class BaseView: UIView {
@@ -48,5 +46,3 @@ extension BaseView {
     }
     
 }
-
-#endif
