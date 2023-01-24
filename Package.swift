@@ -7,11 +7,20 @@ let package = Package(
     name: "SwiftLibrary",
     platforms: [.iOS(.v14)],
     products: [
-        .library(name: "SwiftLibrary",
-                 targets: ["SwiftLibrary"]),
+        .library(name: "SwiftLibraryCore",
+                 targets: ["SwiftLibraryCore"]),
+        .library(name: "SwiftLibraryRxCocoa",
+                 targets: ["SwiftLibraryRxCocoa"])
+    ],
+    dependencies: [
+        .package(url: "https://github.com/ReactiveX/RxSwift.git", from: "6.5.0")
     ],
     targets: [
-        .target(name: "SwiftLibrary",
-                dependencies: [])
+        .target(name: "SwiftLibraryCore",
+                dependencies: []),
+        .target(name: "SwiftLibraryRxCocoa",
+                dependencies: [
+                    .product(name: "RxCocoa", package: "RxSwift")
+                ])
     ]
 )
