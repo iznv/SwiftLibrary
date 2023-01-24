@@ -5,6 +5,8 @@
 //  Created by Ivan Zinovyev on 21.01.2023.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 open class BaseTableViewCell: UITableViewCell {
@@ -49,3 +51,5 @@ extension BaseTableViewCell {
     }
     
 }
+
+#endif
