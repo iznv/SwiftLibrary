@@ -8,6 +8,21 @@
 import UIKit
 
 public extension UIView {
+    
+    func animate(isHighlighted: Bool,
+                 duration: TimeInterval = 0.25,
+                 normalAlpha: CGFloat = 1,
+                 highlightedAlpha: CGFloat = 0.6) {
+        
+        UIView.animate(withDuration: duration,
+                       delay: 0.0,
+                       options: [.allowUserInteraction]) { [weak self] in
+
+            self?.alpha = isHighlighted
+                ? highlightedAlpha * normalAlpha
+                : normalAlpha
+        }
+    }
 
     func crossDissolveTransition(duration: TimeInterval = 0.3,
                                  closure: @escaping () -> Void) {

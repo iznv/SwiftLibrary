@@ -21,5 +21,7 @@ public extension String {
     
     static let colon = ":"
     
+    static let linefeed = "\n"
+    
 }
 

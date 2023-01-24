@@ -5,7 +5,7 @@
 //  Created by Ivan Zinovyev on 24.01.2023.
 //
 
-import Foundation
+import UIKit
 
 public extension String {
     
@@ -29,6 +29,17 @@ public extension String {
         let attributed = self.attributed
         attributed.addAttributes(attributes, range: attributed.range)
         return attributed
+    }
+    
+    func withParagraphStyle(lineHeightMultiple: CGFloat = 1,
+                            alignment: NSTextAlignment = .natural,
+                            lineBreakMode: NSLineBreakMode = .byTruncatingTail,
+                            lineBreakStrategy: NSParagraphStyle.LineBreakStrategy = .pushOut) -> NSMutableAttributedString {
+        return attributed
+            .withParagraphStyle(lineHeightMultiple: lineHeightMultiple,
+                                alignment: alignment,
+                                lineBreakMode: lineBreakMode,
+                                lineBreakStrategy: lineBreakStrategy)
     }
     
 }
