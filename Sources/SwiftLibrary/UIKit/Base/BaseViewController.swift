@@ -7,8 +7,6 @@
 
 #if os(iOS)
 
-import UIKit
-
 open class BaseViewController<ViewModelType>: UIViewController {
     
     // MARK: - Properties
