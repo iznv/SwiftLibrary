@@ -7,6 +7,8 @@
 
 #if os(iOS)
 
+import UIKit
+
 open class BaseView: UIView {
     
     // MARK: - Init

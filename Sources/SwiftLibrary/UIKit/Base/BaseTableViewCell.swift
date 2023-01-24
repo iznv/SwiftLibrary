@@ -7,6 +7,8 @@
 
 #if os(iOS)
 
+import UIKit
+
 open class BaseTableViewCell: UITableViewCell {
     
     // MARK: - Init

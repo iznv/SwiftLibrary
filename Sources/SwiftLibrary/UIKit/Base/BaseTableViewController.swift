@@ -7,6 +7,8 @@
 
 #if os(iOS)
 
+import UIKit
+
 open class BaseTableViewController<ViewModelType>: BaseViewController<ViewModelType> {
     
     // MARK: - Views
