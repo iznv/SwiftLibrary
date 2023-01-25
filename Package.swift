@@ -9,6 +9,8 @@ let package = Package(
     products: [
         .library(name: "SwiftLibraryCore",
                  targets: ["SwiftLibraryCore"]),
+        .library(name: "SwiftLibraryUIKit",
+                 targets: ["SwiftLibraryUIKit"]),
         .library(name: "SwiftLibraryRxCocoa",
                  targets: ["SwiftLibraryRxCocoa"]),
         .library(name: "SwiftLibraryTableKit",
@@ -20,7 +22,8 @@ let package = Package(
         .package(url: "https://github.com/SnapKit/SnapKit.git", from: "5.6.0")
     ],
     targets: [
-        .target(name: "SwiftLibraryCore",
+        .target(name: "SwiftLibraryCore"),
+        .target(name: "SwiftLibraryUIKit",
                 dependencies: ["SnapKit"]),
         .target(name: "SwiftLibraryRxCocoa",
                 dependencies: [

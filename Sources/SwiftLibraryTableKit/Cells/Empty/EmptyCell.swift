@@ -5,6 +5,7 @@
 //  Created by Ivan Zinovyev on 25.01.2023.
 //
 
+import SnapKit
 import SwiftLibraryCore
 import TableKit
 import UIKit
