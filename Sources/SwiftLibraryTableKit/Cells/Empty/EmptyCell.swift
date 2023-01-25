@@ -36,12 +36,10 @@ public class EmptyCell: UITableViewCell {
 extension EmptyCell: ConfigurableCell {
     
     public func configure(with horizontalInset: CGFloat) {
-        containerView.activate {[
-            $0.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalInset),
-            $0.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: horizontalInset),
-            $0.topAnchor.constraint(equalTo: contentView.topAnchor),
-            $0.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-        ]}
+        containerView.snp.remakeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(horizontalInset)
+            make.top.bottom.equalToSuperview()
+        }
     }
     
 }

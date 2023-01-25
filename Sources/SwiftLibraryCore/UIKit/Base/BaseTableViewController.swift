@@ -46,12 +46,9 @@ open class BaseTableViewController<ViewModelType>: BaseViewController<ViewModelT
     // MARK: - Constraints
     
     override open func configureConstraints() {
-        tableView.activate {[
-            $0.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            $0.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            $0.topAnchor.constraint(equalTo: view.topAnchor),
-            $0.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ]}
+        tableView.snp.remakeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
     
     // MARK: - To Override

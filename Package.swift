@@ -16,16 +16,21 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/ReactiveX/RxSwift.git", from: "6.5.0"),
-        .package(url: "https://github.com/maxsokolov/TableKit.git", from: "2.11.0")
+        .package(url: "https://github.com/maxsokolov/TableKit.git", from: "2.11.0"),
+        .package(url: "https://github.com/SnapKit/SnapKit.git", from: "5.6.0")
     ],
     targets: [
         .target(name: "SwiftLibraryCore",
-                dependencies: []),
+                dependencies: ["SnapKit"]),
         .target(name: "SwiftLibraryRxCocoa",
                 dependencies: [
                     .product(name: "RxCocoa", package: "RxSwift")
                 ]),
         .target(name: "SwiftLibraryTableKit",
-                dependencies: ["SwiftLibraryCore", "TableKit"])
+                dependencies: [
+                    "SwiftLibraryCore",
+                    "SnapKit",
+                    "TableKit"
+                ])
     ]
 )
