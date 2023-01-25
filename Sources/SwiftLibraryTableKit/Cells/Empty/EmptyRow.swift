@@ -8,7 +8,7 @@
 import TableKit
 import UIKit
 
-class EmptyRow: TableRow<EmptyCell> {
+public class EmptyRow: TableRow<EmptyCell> {
     
     // MARK: - Properties
     
@@ -33,11 +33,11 @@ class EmptyRow: TableRow<EmptyCell> {
     
     // MARK: - Overrides
     
-    override var defaultHeight: CGFloat? {
+    public override var defaultHeight: CGFloat? {
         return height
     }
     
-    override func configure(_ cell: UITableViewCell) {
+    public override func configure(_ cell: UITableViewCell) {
         super.configure(cell)
         
         (cell as? EmptyCell)?.containerView.backgroundColor = color
