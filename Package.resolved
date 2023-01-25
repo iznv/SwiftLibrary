@@ -8,6 +8,15 @@
         "revision" : "b4307ba0b6425c0ba4178e138799946c3da594f8",
         "version" : "6.5.0"
       }
+    },
+    {
+      "identity" : "tablekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/maxsokolov/TableKit.git",
+      "state" : {
+        "revision" : "8bf4840d9d0475a92352f02f368f88b74eced447",
+        "version" : "2.11.0"
+      }
     }
   ],
   "version" : 2
