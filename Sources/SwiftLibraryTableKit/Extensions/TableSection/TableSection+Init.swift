@@ -8,7 +8,7 @@
 import TableKit
 import UIKit
 
-extension TableSection {
+public extension TableSection {
     
     convenience init(headerView: UIView? = nil,
                      headerHeight: CGFloat? = nil,

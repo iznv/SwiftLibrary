@@ -8,7 +8,7 @@
 import RxCocoa
 import RxSwift
 
-class BehaviorBox<T> {
+public class BehaviorBox<T> {
 
     private let relay: BehaviorRelay<T>
 
@@ -41,7 +41,7 @@ class BehaviorBox<T> {
     }
 }
 
-extension BehaviorBox where T == Bool {
+public extension BehaviorBox where T == Bool {
 
     func toggle() {
         value.toggle()

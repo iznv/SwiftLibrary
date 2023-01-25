@@ -9,7 +9,7 @@ import SwiftLibraryCore
 import TableKit
 import UIKit
 
-class EmptyCell: UITableViewCell {
+public class EmptyCell: UITableViewCell {
     
     // MARK: - Views
     
@@ -35,7 +35,7 @@ class EmptyCell: UITableViewCell {
 
 extension EmptyCell: ConfigurableCell {
     
-    func configure(with horizontalInset: CGFloat) {
+    public func configure(with horizontalInset: CGFloat) {
         containerView.activate {[
             $0.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalInset),
             $0.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: horizontalInset),

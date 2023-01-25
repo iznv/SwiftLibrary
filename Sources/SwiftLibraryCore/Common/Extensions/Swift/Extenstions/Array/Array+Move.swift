@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Array {
+public extension Array {
     
     mutating func move(from: Int, to: Int) {
         insert(remove(at: from), at: to)

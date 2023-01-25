@@ -40,7 +40,7 @@ open class BaseTableViewCell: UITableViewCell {
 
 // MARK: - Initialization
 
-extension BaseTableViewCell {
+public extension BaseTableViewCell {
     
     func initialize() {
         addViews()

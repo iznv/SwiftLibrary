@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIWindow {
+public extension UIWindow {
     
     func changeRoot(controller: UIViewController) {
         animateRootViewControllerChanging(controller: controller)
@@ -20,7 +20,7 @@ extension UIWindow {
 
 // MARK: - Private
 
-extension UIWindow {
+public extension UIWindow {
     
     func animateRootViewControllerChanging(controller: UIViewController,
                                            duration: TimeInterval = 0.5) {

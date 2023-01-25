@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Calendar {
+public extension Calendar {
     
     var localizedWeekdaySymbols: [String] {
         let symbols = weekdaySymbols

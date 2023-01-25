@@ -5,4 +5,4 @@
 //  Created by Ivan Zinovyev on 24.01.2023.
 //
 
-typealias Decoration<T> = (T) -> Void
+public typealias Decoration<T> = (T) -> Void

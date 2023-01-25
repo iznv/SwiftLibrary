@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol DecoratorCompatible {
+public protocol DecoratorCompatible {
 
     associatedtype DecoratorCompatibleType
 
@@ -15,7 +15,7 @@ protocol DecoratorCompatible {
 
 }
 
-extension DecoratorCompatible {
+public extension DecoratorCompatible {
 
     var decorator: Decorator<Self> {
         return Decorator(object: self)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension NSTextAttachment {
+public extension NSTextAttachment {
     
     func alignCenter(font: UIFont,
                      image: UIImage?,

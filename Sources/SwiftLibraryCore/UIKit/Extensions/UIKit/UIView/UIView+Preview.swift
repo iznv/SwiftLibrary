@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 
-extension UIView {
+public extension UIView {
 
     var preview: some View {
         Preview(view: self)

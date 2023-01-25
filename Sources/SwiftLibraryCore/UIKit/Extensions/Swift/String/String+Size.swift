@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension String {
+public extension String {
 
     func size(for font: UIFont) -> CGSize {
         return size(withAttributes: [NSAttributedString.Key.font: font])

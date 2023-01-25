@@ -8,7 +8,7 @@
 import RxCocoa
 import RxSwift
 
-class PublishBox<T> {
+public class PublishBox<T> {
 
     private let relay = PublishRelay<T>()
 
@@ -25,7 +25,7 @@ class PublishBox<T> {
     }
 }
 
-extension PublishBox where T == Void {
+public extension PublishBox where T == Void {
 
     func emit() {
         emit(())

@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIToolbar {
+public extension UIToolbar {
     
     static func makeDoneToolbar(target: UIView) -> UIToolbar {
         let keyboardToolbar = UIToolbar()

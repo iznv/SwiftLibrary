@@ -5,7 +5,7 @@
 //  Created by Ivan Zinovyev on 24.01.2023.
 //
 
-struct Decorator<T> {
+public struct Decorator<T> {
     
     let object: T
     

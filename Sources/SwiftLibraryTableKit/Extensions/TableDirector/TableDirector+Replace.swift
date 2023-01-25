@@ -7,7 +7,7 @@
 
 import TableKit
 
-extension TableDirector {
+public extension TableDirector {
     
     func replace(with sections: [TableSection],
                  shouldReload: Bool = true) {

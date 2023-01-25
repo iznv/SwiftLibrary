@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
 
     init(year: Int,
          month: Int = 1,
@@ -20,7 +20,7 @@ extension Date {
     
 }
 
-extension Date {
+public extension Date {
     
     var numberOfWeeksInMonth: Int {
         let weekRange = Calendar.current.range(of: .weekOfMonth,

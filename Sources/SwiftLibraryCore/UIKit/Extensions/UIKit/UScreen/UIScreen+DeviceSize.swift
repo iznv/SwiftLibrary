@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIScreen {
+public extension UIScreen {
 
     /// 5, 5s, 5c, SE (1st gen)
     var isSmall: Bool {
@@ -21,7 +21,7 @@ extension UIScreen {
     
 }
 
-extension UIScreen {
+public extension UIScreen {
     
     func value(default: CGFloat,
                compact: CGFloat,

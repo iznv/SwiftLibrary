@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension DateInterval {
+public extension DateInterval {
     
     func intersectsWithoutEdges(_ interval: DateInterval) -> Bool {
         guard self.intersects(interval) else { return false }

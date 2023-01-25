@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIImage {
+public extension UIImage {
     
     func with(weight: UIImage.SymbolWeight) -> UIImage {
         return withConfiguration(UIImage.SymbolConfiguration(weight: weight))
