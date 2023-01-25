@@ -20,9 +20,9 @@ public class EmptyRow: TableRow<EmptyCell> {
     
     // MARK: - Init
     
-    init(height: CGFloat,
-         color: UIColor = .clear,
-         horizontalInset: CGFloat = 0) {
+    public init(height: CGFloat,
+                color: UIColor = .clear,
+                horizontalInset: CGFloat = 0) {
         
         self.height = height
         self.color = color
