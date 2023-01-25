@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - Basic
 
-extension UIStackView {
+public extension UIStackView {
 
     func addArrangedSubviews(_ views: [UIView]) {
         views.forEach(addArrangedSubview(_:))
@@ -24,7 +24,7 @@ extension UIStackView {
 
 // MARK: - Advanced
 
-extension UIStackView {
+public extension UIStackView {
     
     func addSpacer(height: CGFloat) {
         let view = UIView()
