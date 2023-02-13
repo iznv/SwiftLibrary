@@ -17,9 +17,9 @@ let package = Package(
                  targets: ["SwiftLibraryTableKit"])
     ],
     dependencies: [
-        .package(url: "https://github.com/ReactiveX/RxSwift.git", from: "6.5.0"),
-        .package(url: "https://github.com/maxsokolov/TableKit.git", from: "2.11.0"),
-        .package(url: "https://github.com/SnapKit/SnapKit.git", from: "5.6.0")
+        .package(url: "https://github.com/iznv/RxSwiftBinaries", from: "6.5.0"),
+        .package(url: "https://github.com/maxsokolov/TableKit", from: "2.11.0"),
+        .package(url: "https://github.com/SnapKit/SnapKit", from: "5.6.0")
     ],
     targets: [
         .target(name: "SwiftLibraryCore"),
@@ -27,7 +27,7 @@ let package = Package(
                 dependencies: ["SnapKit"]),
         .target(name: "SwiftLibraryRxCocoa",
                 dependencies: [
-                    .product(name: "RxCocoa", package: "RxSwift")
+                    .product(name: "RxCocoa", package: "RxSwiftBinaries")
                 ]),
         .target(name: "SwiftLibraryTableKit",
                 dependencies: [
