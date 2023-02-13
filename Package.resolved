@@ -10,11 +10,11 @@
       }
     },
     {
-      "identity" : "snapkit",
+      "identity" : "snapkitbinaries",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SnapKit/SnapKit.git",
+      "location" : "https://github.com/iznv/SnapKitBinaries",
       "state" : {
-        "revision" : "f222cbdf325885926566172f6f5f06af95473158",
+        "revision" : "6eaef6db06e2e6713b2d68098f0a9723d460bef4",
         "version" : "5.6.0"
       }
     },

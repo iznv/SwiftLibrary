@@ -18,13 +18,15 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/iznv/RxSwiftBinaries", from: "6.5.0"),
-        .package(url: "https://github.com/maxsokolov/TableKit", from: "2.11.0"),
-        .package(url: "https://github.com/SnapKit/SnapKit", from: "5.6.0")
+        .package(url: "https://github.com/iznv/SnapKitBinaries", from: "5.6.0"),
+        .package(url: "https://github.com/maxsokolov/TableKit", from: "2.11.0")
     ],
     targets: [
         .target(name: "SwiftLibraryCore"),
         .target(name: "SwiftLibraryUIKit",
-                dependencies: ["SnapKit"]),
+                dependencies: [
+                    .product(name: "SnapKit", package: "SnapKitBinaries")
+                ]),
         .target(name: "SwiftLibraryRxCocoa",
                 dependencies: [
                     .product(name: "RxCocoa", package: "RxSwiftBinaries")
@@ -32,7 +34,7 @@ let package = Package(
         .target(name: "SwiftLibraryTableKit",
                 dependencies: [
                     "SwiftLibraryCore",
-                    "SnapKit",
+                    .product(name: "SnapKit", package: "SnapKitBinaries"),
                     "TableKit"
                 ])
     ]
