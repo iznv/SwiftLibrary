@@ -19,7 +19,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/iznv/RxSwiftBinaries", from: "6.5.0"),
         .package(url: "https://github.com/iznv/SnapKitBinaries", from: "5.6.0"),
-        .package(url: "https://github.com/maxsokolov/TableKit", from: "2.11.0")
+        .package(url: "https://github.com/iznv/TableKitBinaries", from: "2.11.0")
     ],
     targets: [
         .target(name: "SwiftLibraryCore"),
@@ -35,7 +35,7 @@ let package = Package(
                 dependencies: [
                     "SwiftLibraryCore",
                     .product(name: "SnapKit", package: "SnapKitBinaries"),
-                    "TableKit"
+                    .product(name: "TableKit", package: "TableKitBinaries"),
                 ])
     ]
 )

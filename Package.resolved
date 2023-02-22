@@ -19,11 +19,11 @@
       }
     },
     {
-      "identity" : "tablekit",
+      "identity" : "tablekitbinaries",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/maxsokolov/TableKit.git",
+      "location" : "https://github.com/iznv/TableKitBinaries",
       "state" : {
-        "revision" : "8bf4840d9d0475a92352f02f368f88b74eced447",
+        "revision" : "b0f99bb95c1caca58c7bdcf8bb30333cdfc2cbed",
         "version" : "2.11.0"
       }
     }
