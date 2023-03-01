@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftUIKitLibrary",
+    name: "UIKitLibrary",
     platforms: [.iOS(.v14)],
     products: [
         .library(name: "UIKitLibrary",
