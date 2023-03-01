@@ -4,15 +4,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftLibrary",
+    name: "SwiftUIKitLibrary",
     platforms: [.iOS(.v14)],
     products: [
-        .library(name: "SwiftLibraryUIKit",
-                 targets: ["SwiftLibraryUIKit"]),
-        .library(name: "SwiftLibraryRxCocoa",
-                 targets: ["SwiftLibraryRxCocoa"]),
-        .library(name: "SwiftLibraryTableKit",
-                 targets: ["SwiftLibraryTableKit"])
+        .library(name: "UIKitLibrary",
+                 targets: ["UIKitLibrary"]),
+        .library(name: "RxCocoaLibrary",
+                 targets: ["RxCocoaLibrary"]),
+        .library(name: "TableKitLibrary",
+                 targets: ["TableKitLibrary"])
     ],
     dependencies: [
         .package(url: "https://github.com/iznv/RxSwiftBinaries", from: "6.5.0"),
@@ -20,15 +20,15 @@ let package = Package(
         .package(url: "https://github.com/iznv/TableKitBinaries", from: "2.11.0")
     ],
     targets: [
-        .target(name: "SwiftLibraryUIKit",
+        .target(name: "UIKitLibrary",
                 dependencies: [
                     .product(name: "SnapKit", package: "SnapKitBinaries")
                 ]),
-        .target(name: "SwiftLibraryRxCocoa",
+        .target(name: "RxCocoaLibrary",
                 dependencies: [
                     .product(name: "RxCocoa", package: "RxSwiftBinaries")
                 ]),
-        .target(name: "SwiftLibraryTableKit",
+        .target(name: "TableKitLibrary",
                 dependencies: [
                     .product(name: "SnapKit", package: "SnapKitBinaries"),
                     .product(name: "TableKit", package: "TableKitBinaries"),
