@@ -12,15 +12,15 @@ public class PublishBox<T> {
 
     private let relay = PublishRelay<T>()
 
-    func emit(_ value: T) {
+    public func emit(_ value: T) {
         relay.accept(value)
     }
 
-    var observable: Observable<T> {
+    public var observable: Observable<T> {
         return relay.asObservable()
     }
 
-    var driver: Driver<T> {
+    public var driver: Driver<T> {
         return relay.asDriver(onErrorDriveWith: .empty())
     }
     

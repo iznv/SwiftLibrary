@@ -12,7 +12,7 @@ public class BehaviorBox<T> {
 
     private let relay: BehaviorRelay<T>
 
-    var value: T {
+    public var value: T {
         get {
             return relay.value
         }
@@ -21,11 +21,11 @@ public class BehaviorBox<T> {
         }
     }
 
-    var observable: Observable<T> {
+    public var observable: Observable<T> {
         return relay.asObservable()
     }
 
-    var driver: Driver<T> {
+    public var driver: Driver<T> {
         return relay.asDriver()
     }
 
@@ -33,8 +33,8 @@ public class BehaviorBox<T> {
         relay = BehaviorRelay(value: value)
     }
 
-    func bind(from observable: Observable<T>,
-              disposeBag: DisposeBag) {
+    public func bind(from observable: Observable<T>,
+                     disposeBag: DisposeBag) {
 
         observable.bind(to: relay)
             .disposed(by: disposeBag)
