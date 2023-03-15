@@ -29,7 +29,7 @@ public class BehaviorBox<T> {
         return relay.asDriver()
     }
 
-    init(value: T) {
+    public init(value: T) {
         relay = BehaviorRelay(value: value)
     }
 
@@ -39,6 +39,7 @@ public class BehaviorBox<T> {
         observable.bind(to: relay)
             .disposed(by: disposeBag)
     }
+
 }
 
 public extension BehaviorBox where T == Bool {
@@ -46,4 +47,5 @@ public extension BehaviorBox where T == Bool {
     func toggle() {
         value.toggle()
     }
+
 }

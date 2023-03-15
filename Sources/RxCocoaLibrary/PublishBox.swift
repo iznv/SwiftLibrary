@@ -23,6 +23,9 @@ public class PublishBox<T> {
     var driver: Driver<T> {
         return relay.asDriver(onErrorDriveWith: .empty())
     }
+    
+    public init() { }
+
 }
 
 public extension PublishBox where T == Void {
