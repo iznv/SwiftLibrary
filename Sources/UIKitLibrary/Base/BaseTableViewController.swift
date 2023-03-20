@@ -12,7 +12,8 @@ open class BaseTableViewController<ViewModelType>: BaseViewController<ViewModelT
     // MARK: - Views
     
     public lazy var tableView: UITableView = {
-        let view = UITableView()
+        let view = UITableView(frame: .zero,
+                               style: tableViewStyle)
         
         view.backgroundColor = .clear
         view.separatorStyle = .none
@@ -25,6 +26,10 @@ open class BaseTableViewController<ViewModelType>: BaseViewController<ViewModelT
     
     open var contentInset: UIEdgeInsets {
         return .zero
+    }
+    
+    open var tableViewStyle: UITableView.Style {
+        return .plain
     }
     
     // MARK: - Life Cycle
