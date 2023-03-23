@@ -9,8 +9,11 @@ import UIKit
 
 public extension UIWindow {
     
-    func changeRoot(controller: UIViewController) {
-        animateRootViewControllerChanging(controller: controller)
+    func changeRoot(controller: UIViewController,
+                    duration: TimeInterval = 0.3) {
+        
+        animateRootViewControllerChanging(controller: controller,
+                                          duration: duration)
         
         rootViewController = controller
         makeKeyAndVisible()
@@ -20,17 +23,17 @@ public extension UIWindow {
 
 // MARK: - Private
 
-public extension UIWindow {
+private extension UIWindow {
     
     func animateRootViewControllerChanging(controller: UIViewController,
-                                           duration: TimeInterval = 0.5) {
+                                           duration: TimeInterval) {
         
         guard let snapshot = snapshotView(afterScreenUpdates: true) else { return }
         
         controller.view.addSubview(snapshot)
         
         UIView.animate(
-            withDuration: 0.5,
+            withDuration: duration,
             animations: {
                 snapshot.layer.opacity = 0.0
             },
