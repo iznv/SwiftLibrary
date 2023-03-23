@@ -9,7 +9,7 @@ public struct Decorator<T> {
     
     let object: T
     
-    func apply(_ decorations: Decoration<T>...) -> Void {
+    public func apply(_ decorations: Decoration<T>...) -> Void {
         decorations.forEach { $0(object) }
     }
 
