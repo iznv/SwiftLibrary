@@ -15,7 +15,8 @@ let package = Package(
                  targets: ["TableKitLibrary"])
     ],
     dependencies: [
-        .package(url: "https://github.com/iznv/RxSwiftBinaries", from: "6.5.0"),
+        .package(url: "https://github.com/ReactiveX/RxSwift", from: "6.5.0"),
+        .package(url: "https://github.com/RxSwiftCommunity/RxGesture", from: "4.0.4"),
         .package(url: "https://github.com/iznv/SnapKitBinaries", from: "5.6.0"),
         .package(url: "https://github.com/iznv/TableKitBinaries", from: "2.11.0")
     ],
@@ -26,7 +27,8 @@ let package = Package(
                 ]),
         .target(name: "RxCocoaLibrary",
                 dependencies: [
-                    .product(name: "RxCocoa", package: "RxSwiftBinaries")
+                    .product(name: "RxCocoa", package: "RxSwift"),
+                    .product(name: "RxGesture", package: "RxGesture")
                 ]),
         .target(name: "TableKitLibrary",
                 dependencies: [
