@@ -50,10 +50,12 @@ public extension UIStackView {
     func add(view: UIView,
              height: CGFloat? = nil,
              alignment: UIStackViewHorizontalContentAlignment = .edgeToEdge(horizontalInset: 0),
+             size: CGSize? = nil,
              constraints: ((ConstraintMaker) -> Void)? = nil) {
 
         let embededView = view.embedInView(height: height,
                                            alignment: alignment,
+                                           size: size,
                                            constraints: constraints)
         
         addArrangedSubview(embededView)
@@ -67,6 +69,7 @@ private extension UIView {
     
     func embedInView(height: CGFloat?,
                      alignment: UIStackViewHorizontalContentAlignment,
+                     size: CGSize?,
                      constraints: ((ConstraintMaker) -> Void)?) -> UIView {
         
         let view = UIView()
@@ -86,6 +89,10 @@ private extension UIView {
                 make.leading.trailing.equalToSuperview().inset(horizontalInset)
             case .center:
                 make.centerX.equalToSuperview()
+            }
+            
+            if let size = size {
+                make.size.equalTo(size)
             }
             
             constraints?(make)
