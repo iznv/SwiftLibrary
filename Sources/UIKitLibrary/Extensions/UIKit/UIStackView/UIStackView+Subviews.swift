@@ -49,10 +49,12 @@ public extension UIStackView {
     
     func add(view: UIView,
              height: CGFloat? = nil,
-             alignment: UIStackViewHorizontalContentAlignment = .edgeToEdge(horizontalInset: 0)) {
+             alignment: UIStackViewHorizontalContentAlignment = .edgeToEdge(horizontalInset: 0),
+             constraints: ((ConstraintMaker) -> Void)? = nil) {
 
         let embededView = view.embedInView(height: height,
-                                           alignment: alignment)
+                                           alignment: alignment,
+                                           constraints: constraints)
         
         addArrangedSubview(embededView)
     }
@@ -64,7 +66,8 @@ public extension UIStackView {
 private extension UIView {
     
     func embedInView(height: CGFloat?,
-                     alignment: UIStackViewHorizontalContentAlignment) -> UIView {
+                     alignment: UIStackViewHorizontalContentAlignment,
+                     constraints: ((ConstraintMaker) -> Void)?) -> UIView {
         
         let view = UIView()
         view.backgroundColor = .clear
@@ -84,6 +87,8 @@ private extension UIView {
             case .center:
                 make.centerX.equalToSuperview()
             }
+            
+            constraints?(make)
         }
         
         return view
