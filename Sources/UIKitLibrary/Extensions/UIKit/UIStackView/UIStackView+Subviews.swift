@@ -8,6 +8,16 @@
 import SnapKit
 import UIKit
 
+// MARK: - Models
+
+public enum UIStackViewHorizontalContentAlignment {
+    
+    case edgeToEdge(horizontalInset: CGFloat)
+    
+    case center
+    
+}
+
 // MARK: - Basic
 
 public extension UIStackView {
@@ -39,10 +49,10 @@ public extension UIStackView {
     
     func add(view: UIView,
              height: CGFloat? = nil,
-             horizontalInset: CGFloat = 0) {
+             alignment: UIStackViewHorizontalContentAlignment = .edgeToEdge(horizontalInset: 0)) {
 
         let embededView = view.embedInView(height: height,
-                                           horizontalInset: horizontalInset)
+                                           alignment: alignment)
         
         addArrangedSubview(embededView)
     }
@@ -54,8 +64,7 @@ public extension UIStackView {
 private extension UIView {
     
     func embedInView(height: CGFloat?,
-                     horizontalInset: CGFloat,
-                     closure: ((ConstraintMaker) -> Void)? = nil) -> UIView {
+                     alignment: UIStackViewHorizontalContentAlignment) -> UIView {
         
         let view = UIView()
         view.backgroundColor = .clear
@@ -68,9 +77,13 @@ private extension UIView {
             }
             
             make.top.bottom.equalToSuperview()
-            make.leading.trailing.equalToSuperview().inset(horizontalInset)
             
-            closure?(make)
+            switch alignment {
+            case .edgeToEdge(let horizontalInset):
+                make.leading.trailing.equalToSuperview().inset(horizontalInset)
+            case .center:
+                make.centerX.equalToSuperview()
+            }
         }
         
         return view
