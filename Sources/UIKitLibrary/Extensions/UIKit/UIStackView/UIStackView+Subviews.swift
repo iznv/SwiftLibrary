@@ -14,6 +14,8 @@ public enum UIStackViewHorizontalContentAlignment {
     
     case edgeToEdge(horizontalInset: CGFloat)
     
+    case custom(leading: CGFloat, trailing: CGFloat)
+    
     case center
     
 }
@@ -85,8 +87,11 @@ private extension UIView {
             make.top.bottom.equalToSuperview()
             
             switch alignment {
-            case .edgeToEdge(let horizontalInset):
+            case let .edgeToEdge(horizontalInset):
                 make.leading.trailing.equalToSuperview().inset(horizontalInset)
+            case let .custom(leading, trailing):
+                make.leading.equalToSuperview().inset(leading)
+                make.trailing.equalToSuperview().inset(trailing)
             case .center:
                 make.centerX.equalToSuperview()
             }
