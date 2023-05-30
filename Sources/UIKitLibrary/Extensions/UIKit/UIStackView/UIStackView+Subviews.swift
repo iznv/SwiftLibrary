@@ -18,6 +18,10 @@ public enum UIStackViewHorizontalContentAlignment {
     
     case center
     
+    case leading(inset: CGFloat)
+    
+    case trailing(inset: CGFloat)
+    
 }
 
 // MARK: - Basic
@@ -94,6 +98,10 @@ private extension UIView {
                 make.trailing.equalToSuperview().inset(trailing)
             case .center:
                 make.centerX.equalToSuperview()
+            case let .leading(inset):
+                make.leading.equalToSuperview().inset(inset)
+            case let .trailing(inset):
+                make.trailing.equalToSuperview().inset(inset)
             }
             
             if let size = size {
