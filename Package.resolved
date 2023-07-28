@@ -14,25 +14,25 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ReactiveX/RxSwift.git",
       "state" : {
-        "revision" : "b4307ba0b6425c0ba4178e138799946c3da594f8",
-        "version" : "6.5.0"
+        "revision" : "9dcaa4b333db437b0fbfaf453fad29069044a8b4",
+        "version" : "6.6.0"
       }
     },
     {
-      "identity" : "snapkitbinaries",
+      "identity" : "snapkit",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/iznv/SnapKitBinaries",
+      "location" : "https://github.com/SnapKit/SnapKit",
       "state" : {
-        "revision" : "6eaef6db06e2e6713b2d68098f0a9723d460bef4",
+        "revision" : "f222cbdf325885926566172f6f5f06af95473158",
         "version" : "5.6.0"
       }
     },
     {
-      "identity" : "tablekitbinaries",
+      "identity" : "tablekit",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/iznv/TableKitBinaries",
+      "location" : "https://github.com/maxsokolov/TableKit",
       "state" : {
-        "revision" : "b0f99bb95c1caca58c7bdcf8bb30333cdfc2cbed",
+        "revision" : "8bf4840d9d0475a92352f02f368f88b74eced447",
         "version" : "2.11.0"
       }
     }
