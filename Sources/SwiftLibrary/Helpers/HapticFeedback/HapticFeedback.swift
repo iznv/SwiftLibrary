@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct HapticFeedback {
+public struct HapticFeedback {
     
     static func notificationOccurred(type: UINotificationFeedbackGenerator.FeedbackType) {
         UINotificationFeedbackGenerator().notificationOccurred(type)
