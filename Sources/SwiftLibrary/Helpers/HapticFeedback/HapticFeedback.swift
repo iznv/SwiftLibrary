@@ -9,15 +9,15 @@ import UIKit
 
 public struct HapticFeedback {
     
-    static func notificationOccurred(type: UINotificationFeedbackGenerator.FeedbackType) {
+    public static func notificationOccurred(type: UINotificationFeedbackGenerator.FeedbackType) {
         UINotificationFeedbackGenerator().notificationOccurred(type)
     }
     
-    static func impactOccurred(style: UIImpactFeedbackGenerator.FeedbackStyle) {
+    public static func impactOccurred(style: UIImpactFeedbackGenerator.FeedbackStyle) {
         UIImpactFeedbackGenerator(style: style).impactOccurred()
     }
     
-    static func selectionChanged() {
+    public static func selectionChanged() {
         UISelectionFeedbackGenerator().selectionChanged()
     }
     
