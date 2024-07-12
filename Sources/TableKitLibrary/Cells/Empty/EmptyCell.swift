@@ -21,6 +21,7 @@ public class EmptyCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         selectionStyle = .none
+        backgroundColor = .clear
         
         contentView.addSubview(containerView)
     }
