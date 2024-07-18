@@ -26,8 +26,8 @@ public extension UIView {
     
     func animate(isHighlighted: Bool,
                  duration: TimeInterval = 0.25,
-                 normalBackgroundColor: UIColor,
-                 highlightedBackgroundColor: UIColor) {
+                 normalBackgroundColor: UIColor?,
+                 highlightedBackgroundColor: UIColor?) {
         
         UIView.animate(withDuration: duration,
                        delay: 0.0,
