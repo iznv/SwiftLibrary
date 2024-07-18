@@ -11,7 +11,7 @@ open class BaseControl: UIControl {
     
     // MARK: - Properties
     
-    var adjustsAlphaWhenHighlighted = true
+    public var adjustsAlphaWhenHighlighted = true
     
     // MARK: - Init
     
