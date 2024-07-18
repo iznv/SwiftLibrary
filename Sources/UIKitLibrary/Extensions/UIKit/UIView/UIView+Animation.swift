@@ -16,11 +16,26 @@ public extension UIView {
         
         UIView.animate(withDuration: duration,
                        delay: 0.0,
-                       options: [.allowUserInteraction]) { [weak self] in
+                       options: [.allowUserInteraction, .beginFromCurrentState]) { [weak self] in
 
             self?.alpha = isHighlighted
                 ? highlightedAlpha * normalAlpha
                 : normalAlpha
+        }
+    }
+    
+    func animate(isHighlighted: Bool,
+                 duration: TimeInterval = 0.25,
+                 normalBackgroundColor: UIColor,
+                 highlightedBackgroundColor: UIColor) {
+        
+        UIView.animate(withDuration: duration,
+                       delay: 0.0,
+                       options: [.allowUserInteraction, .beginFromCurrentState]) { [weak self] in
+
+            self?.backgroundColor = isHighlighted
+                ? highlightedBackgroundColor
+                : normalBackgroundColor
         }
     }
 
@@ -38,7 +53,7 @@ public extension UIView {
         
         UIView.transition(with: self,
                           duration: duration,
-                          options: .transitionCrossDissolve,
+                          options: [.transitionCrossDissolve, .allowUserInteraction, .beginFromCurrentState],
                           animations: closure) { _ in
             completion?()
         }

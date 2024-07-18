@@ -9,6 +9,10 @@ import UIKit
 
 open class BaseControl: UIControl {
     
+    // MARK: - Properties
+    
+    var adjustsAlphaWhenHighlighted = true
+    
     // MARK: - Init
     
     override public init(frame: CGRect) {
@@ -37,7 +41,9 @@ open class BaseControl: UIControl {
     
     open override var isHighlighted: Bool {
         didSet {
-            animate(isHighlighted: isHighlighted)
+            if adjustsAlphaWhenHighlighted {
+                animate(isHighlighted: isHighlighted)
+            }
         }
     }
     
