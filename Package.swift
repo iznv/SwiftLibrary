@@ -9,26 +9,17 @@ let package = Package(
     products: [
         .library(name: "UIKitLibrary",
                  targets: ["UIKitLibrary"]),
-        .library(name: "RxCocoaLibrary",
-                 targets: ["RxCocoaLibrary"]),
         .library(name: "TableKitLibrary",
                  targets: ["TableKitLibrary"])
     ],
     dependencies: [
-        .package(url: "https://github.com/ReactiveX/RxSwift", from: "6.6.0"),
-        .package(url: "https://github.com/RxSwiftCommunity/RxGesture", from: "4.0.4"),
-        .package(url: "https://github.com/SnapKit/SnapKit", from: "5.6.0"),
+        .package(url: "https://github.com/SnapKit/SnapKit", from: "5.7.1"),
         .package(url: "https://github.com/maxsokolov/TableKit", from: "2.11.0")
     ],
     targets: [
         .target(name: "UIKitLibrary",
                 dependencies: [
                     .product(name: "SnapKit", package: "SnapKit")
-                ]),
-        .target(name: "RxCocoaLibrary",
-                dependencies: [
-                    .product(name: "RxCocoa", package: "RxSwift"),
-                    .product(name: "RxGesture", package: "RxGesture")
                 ]),
         .target(name: "TableKitLibrary",
                 dependencies: [
